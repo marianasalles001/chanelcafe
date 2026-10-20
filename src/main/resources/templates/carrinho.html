@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <title>Carrinho - Chanel Café</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+            <h1>CHANEL CAFÉ</h1>
+        </div>
+
+        <nav>
+
+            <a href="index.html">Início</a>
+
+            <a href="produtos.html">Cardápio</a>
+
+            <a href="pedidos.html">Pedidos</a>            
+
+            <a href="carrinho.html" class="icone-carrinho" title="Carrinho">
+                🛒
+            </a>           
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="carrinho">
+
+            <h2>Meu Carrinho</h2>
+
+            <div id="lista-carrinho"></div>
+
+            <h3 id="total"></h3>
+
+            <button onclick="finalizarPedido()" class="botao-finalizar">
+                Finalizar Pedido
+            </button>
+
+            <button onclick="limparCarrinho()" class="botao-limpar">
+                Limpar Carrinho
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Chanel Café. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <script src="../js/carrinho.js"></script>
+
+</body>
+
+</html>

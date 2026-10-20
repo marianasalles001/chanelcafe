@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Produtos - Chanel Café</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+            <h1>CHANEL CAFÉ</h1>
+        </div>
+
+        <nav>
+
+            <a href="index.html">Início</a>
+
+            <a href="produtos.html">Cardápio</a>
+
+            <a href="pedidos.html">Pedidos</a>
+
+            <a href="carrinho.html" class="icone-carrinho" title="Carrinho">
+                🛒
+            </a>           
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="cardapio">
+
+            <h2>Nosso Cardápio</h2>
+
+            <p class="descricao">
+                Escolha seu café favorito e aproveite nossas opções deliciosas.
+            </p>
+
+
+            <div class="itens-cardapio">
+
+
+                <article class="item">
+
+                    <img src="../img/caféexpresso.jpg" alt="Café Expresso">
+
+                    <h3>Café Expresso</h3>
+
+                    <p>
+                        Café intenso e tradicional, preparado com grãos selecionados.
+                    </p>
+
+                    <strong>R$ 6,00</strong>
+
+                    <button onclick="adicionarCarrinho('Café Expresso', 6.00)" class="botao-carrinho">
+                        Adicionar ao Carrinho
+</button>
+                    </a>
+
+                </article>
+
+
+                <article class="item">
+
+                    <img src="../img/cappucino.jpg" alt="Cappuccino">
+
+                    <h3>Cappuccino</h3>
+
+                    <p>
+                        Café expresso com leite vaporizado e espuma cremosa.
+                    </p>
+
+                    <strong>R$ 10,00</strong>
+
+                    <button onclick="adicionarCarrinho('Cappuccino', 10.00)" class="botao-carrinho">
+                        Adicionar ao Carrinho
+                    </a>
+
+                </article>
+
+
+                <article class="item">
+
+                    <img src="../img/cafécomleite.jpg" alt="Café com Leite">
+
+                    <h3>Café com Leite</h3>
+
+                    <p>
+                        Uma combinação suave de café e leite quente.
+                    </p>
+
+                    <strong>R$ 8,00</strong>
+
+                    <button onclick="adicionarCarrinho('Café com leite', 8.00)" class="botao-carrinho">
+                        Adicionar ao Carrinho
+                    </a>
+
+                </article>
+
+
+                <article class="item">
+
+                    <img src="../img/chocolatequente.jpg" alt="Chocolate Quente">
+
+                    <h3>Chocolate Quente</h3>
+
+                    <p>
+                        Bebida cremosa de chocolate, perfeita para os dias frios.
+                    </p>
+
+                    <strong>R$ 12,00</strong>
+
+                    <button onclick="adicionarCarrinho('Chocolate quente', 12.00)" class="botao-carrinho">
+                        Adicionar ao Carrinho
+                    </a>
+
+                </article>
+
+
+                <article class="item">
+
+                    <img src="../img/croissant.jpg" alt="Croissant">
+
+                    <h3>Croissant</h3>
+
+                    <p>
+                        Massa leve e crocante, com recheio de queijo e presunto.
+                    </p>
+
+                    <strong>R$ 14,00</strong>
+
+                    <button onclick="adicionarCarrinho('Croissant', 14.00)" class="botao-carrinho">
+                        Adicionar ao Carrinho
+                    </a>
+
+                </article>
+
+
+                <article class="item">
+
+                    <img src="../img/paodequeijo.jpg" alt="Pão de Queijo">
+
+                    <h3>Pão de Queijo</h3>
+
+                    <p>
+                        Pães de queijo quentinhos e preparados com muito sabor.
+                    </p>
+
+                    <strong>R$ 7,00</strong>
+
+                    <button onclick="adicionarCarrinho('Pão de queijo', 7.00)" class="botao-carrinho">
+                        Adicionar ao Carrinho
+                    </a>
+
+                </article>
+
+
+                <article class="item">
+
+                    <img src="../img/bolo de chocolate.jpg" alt="Bolo de Chocolate">
+
+                    <h3>Bolo de Chocolate</h3>
+
+                    <p>
+                        Bolo macio de chocolate com cobertura cremosa.
+                    </p>
+
+                    <strong>R$ 12,00</strong>
+
+                    <button onclick="adicionarCarrinho('Bolo de chocolate', 12.00)" class="botao-carrinho">
+                        Adicionar ao Carrinho
+                    </a>
+
+                </article>
+
+
+                <article class="item">
+
+                    <img src="../img/tortademorango.jpg" alt="Torta de Morango">
+
+                    <h3>Torta de Morango</h3>
+
+                    <p>
+                        Torta delicada com creme e morangos frescos.
+                    </p>
+
+                    <strong>R$ 15,00</strong>
+
+                    <button onclick="adicionarCarrinho('Torta de morango', 15.00)" class="botao-carrinho">
+                        Adicionar ao Carrinho
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Chanel Café. Todos os direitos reservados.
+        </p>
+
+    </footer>
+    <script src="../js/carrinho.js"></script>
+</body>
+
+</html>

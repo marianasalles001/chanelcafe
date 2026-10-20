@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanel Café | Mais que café, uma experiência</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<!-- CABEÇALHO -->
+<header>
+    <div class="logo">
+        <h1>CHANEL CAFÉ</h1>
+    </div>
+
+    <nav>
+        <a th:href="@{/}">Início</a>
+        <a th:href="@{/produtos}">Cardápio</a>
+        <a th:href="@{/pedidos}">Pedidos</a>
+        <a th:href="@{/carrinho}" class="icone-carrinho" title="Carrinho">🛒</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- APRESENTAÇÃO PRINCIPAL -->
+    <section class="apresentacao">
+
+        <p>BEM-VINDO À</p>
+
+        <h2>Chanel Café</h2>
+
+        <h3>MAIS QUE CAFÉ,<br>UMA EXPERIÊNCIA.</h3>
+
+        <p>
+            No Chanel Café, cada xícara é preparada com muito cuidado,
+            para oferecer a você uma experiência única, com cafés especiais,
+            doces irresistíveis e um ambiente acolhedor e sofisticado.
+        </p>
+
+    </section>
+
+    <!-- DESTAQUE -->
+    <section class="destaque">
+
+        <h2>Um momento só seu.</h2>
+
+        <p>
+            Mais do que uma cafeteria, um lugar para apreciar os pequenos
+            prazeres da vida. Descubra novos sabores, aproveite uma pausa
+            na rotina e transforme seu café em uma experiência especial.
+        </p>
+
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="diferenciais">
+
+        <article>
+            <h3>☕ CAFÉS ESPECIAIS</h3>
+            <p>
+                Grãos selecionados, aromas marcantes e sabores preparados
+                para tornar cada xícara inesquecível.
+            </p>
+        </article>
+
+        <article>
+            <h3>🥐 DOCES E SALGADOS</h3>
+            <p>
+                Uma seleção de doces e salgados deliciosos para acompanhar
+                seu café favorito em qualquer momento do dia.
+            </p>
+        </article>
+
+        <article>
+            <h3>AMBIENTE ACOLHEDOR</h3>
+            <p>
+                Um espaço confortável e elegante, perfeito para relaxar,
+                estudar, trabalhar ou encontrar pessoas especiais.
+            </p>
+        </article>
+
+        <article>
+            <h3>ATENDIMENTO ESPECIAL</h3>
+            <p>
+                Cada detalhe é pensado para receber você com carinho
+                e proporcionar uma experiência agradável.
+            </p>
+        </article>
+
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section class="sobre-nos">
+
+        <h2>Sobre Nós</h2>
+
+        <h3>Uma cafeteria feita para todos os momentos.</h3>
+
+        <p>
+            O Chanel Café nasceu do desejo de criar um espaço onde o sabor,
+            o conforto e a boa companhia se encontram.
+        </p>
+
+        <p>
+            Acreditamos que os momentos mais simples podem se tornar
+            especiais quando acompanhados de um bom café. Por isso,
+            cada detalhe da nossa cafeteria busca unir qualidade,
+            aconchego e sofisticação.
+        </p>
+
+        <p>
+            Seja para começar bem o dia, fazer uma pausa na rotina
+            ou compartilhar momentos com quem você gosta, queremos
+            fazer parte da sua experiência.
+        </p>
+
+    </section>
+
+    <!-- NOSSOS VALORES -->
+    <section class="nossos-valores">
+
+        <h2>Nossos Valores</h2>
+
+        <article>
+            <h3>Qualidade</h3>
+            <p>
+                Valorizamos ingredientes selecionados e o cuidado
+                no preparo de cada produto.
+            </p>
+        </article>
+
+        <article>
+            <h3>Conforto</h3>
+            <p>
+                Buscamos oferecer um ambiente acolhedor, elegante
+                e agradável para todos.
+            </p>
+        </article>
+
+        <article>
+            <h3>Satisfação</h3>
+            <p>
+                Queremos que cada visita seja uma experiência
+                positiva e cheia de bons momentos.
+            </p>
+        </article>
+
+        <article>
+            <h3>Tradição</h3>
+            <p>
+                Celebramos o prazer de apreciar um bom café,
+                respeitando o sabor e o cuidado em cada preparo.
+            </p>
+        </article>
+
+    </section>
+
+    <!-- CONVITE PARA O CARDÁPIO -->
+    <section class="convite-cardapio">
+
+        <h2>Seu próximo café favorito está aqui.</h2>
+
+        <p>
+            Conheça nossas bebidas, nossos doces e salgados
+            e encontre seu novo sabor favorito.
+        </p>
+
+        <a th:href="@{/produtos}" class="botao-cardapio">
+            CONHEÇA NOSSO CARDÁPIO
+        </a>
+
+    </section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+
+    <h3>CHANEL CAFÉ</h3>
+
+    <p>Mais que café, uma experiência.</p>
+
+    <p>© 2026 Chanel Café. Todos os direitos reservados.</p>
+
+</footer>
+
+</body>
+</html>

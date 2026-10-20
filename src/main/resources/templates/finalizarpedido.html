@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Finalizar Pedido - Chanel Café</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+            <h1>CHANEL CAFÉ</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Cardápio</a>
+            <a href="pedidos.html">Pedidos</a>            
+            <a href="carrinho.html" class="icone-carrinho" title="Carrinho">
+                🛒
+            </a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="finalizar-pedido">
+
+            <h2>Finalizar Pedido</h2>
+
+            <p class="descricao">
+                Confira seu pedido e preencha seus dados.
+            </p>
+
+
+            <!-- RESUMO DO PEDIDO -->
+
+            <div class="pedido-resumo">
+
+                <h3>Resumo do Pedido</h3>
+
+                <div id="resumo-produtos"></div>
+
+                <h3 id="resumo-total">
+                    Total: R$ 0,00
+                </h3>
+
+            </div>
+
+
+            <!-- DADOS DO CLIENTE -->
+
+            <div class="dados-pedido">
+
+                <h3>Seus Dados</h3>
+
+                <form onsubmit="enviarPedido(event)">
+
+                    <label for="nome">
+                        Nome completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+
+
+                    <label for="telefone">
+                        Telefone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        placeholder="(00) 00000-0000"
+                        required
+                    >
+
+
+                    <label for="endereco">
+                        Endereço
+                    </label>
+
+                    <input
+                        type="text"
+                        id="endereco"
+                        placeholder="Digite seu endereço"
+                        required
+                    >
+
+
+                    <label for="numero">
+                        Número
+                    </label>
+
+                    <input
+                        type="text"
+                        id="numero"
+                        placeholder="Número da residência"
+                        required
+                    >
+
+
+                    <!-- FORMA DE PAGAMENTO -->
+
+                    <label for="pagamento">
+                        Forma de pagamento
+                    </label>
+
+                    <select
+                        id="pagamento"
+                        onchange="mostrarPagamento()"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione uma opção
+                        </option>
+
+                        <option value="Pix">
+                            Pix
+                        </option>
+
+                        <option value="Cartão de crédito">
+                            Cartão de crédito
+                        </option>
+
+                        <option value="Cartão de débito">
+                            Cartão de débito
+                        </option>
+
+                        <option value="Dinheiro">
+                            Dinheiro
+                        </option>
+
+                    </select>
+
+
+                    <!-- OS CAMPOS DE PAGAMENTO APARECEM AQUI -->
+
+                    <div id="dados-pagamento"></div>
+
+
+                    <!-- BOTÃO -->
+
+                    <button
+                        type="submit"
+                        class="botao-confirmar"
+                    >
+                        Confirmar Pedido
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Chanel Café. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <script src="../js/finalizarpedido.js"></script>
+
+</body>
+
+</html>

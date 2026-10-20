@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cardápio - Chanel Café</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body class="pagina-produtos">
+
+<header class="cabecalho">
+    <a th:href="@{/}" class="logo">CHANEL CAFÉ</a>
+
+    <nav class="menu">
+        <a th:href="@{/}">Início</a>
+        <a th:href="@{/produtos}" class="ativo">Cardápio</a>
+        <a th:href="@{/pedidos}">Pedidos</a>
+        <a th:href="@{/carrinho}" class="link-carrinho">
+            🛒 Carrinho
+            <span id="quantidade-carrinho">0</span>
+        </a>
+    </nav>
+</header>
+
+<main class="conteudo-cardapio">
+
+    <section class="titulo-cardapio">
+        <p class="subtitulo">UM MOMENTO ESPECIAL</p>
+        <h1>Nosso Cardápio</h1>
+        <p>Sabores preparados especialmente para você.</p>
+    </section>
+
+    <!-- CATEGORIAS -->
+    <nav class="categorias">
+        <button type="button" class="categoria ativa"
+                data-categoria="quentes">Bebidas quentes</button>
+
+        <button type="button" class="categoria"
+                data-categoria="geladas">Bebidas geladas</button>
+
+        <button type="button" class="categoria"
+                data-categoria="padaria">Padaria e confeitaria</button>
+
+        <button type="button" class="categoria"
+                data-categoria="salgados">Lanches salgados</button>
+
+        <button type="button" class="categoria"
+                data-categoria="sobremesas">Sobremesas</button>
+
+        <button type="button" class="categoria"
+                data-categoria="saudaveis">Opções saudáveis</button>
+
+        <button type="button" class="categoria"
+                data-categoria="venda">Produtos para venda</button>
+    </nav>
+
+    <!-- BEBIDAS QUENTES -->
+    <section class="secao-produtos ativa" id="quentes">
+        <h2>Bebidas quentes</h2>
+
+        <div class="grade-produtos">
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO CAFÉ EXPRESSO NA PASTA images -->
+                <img th:src="@{/img/cafeexpresso.jpg}"
+                     alt="Café expresso"
+                     class="foto-produto">
+
+                <div class="informacoes-produto">
+                    <h3>Café expresso</h3>
+                    <p>Café intenso e aromático.</p>
+                    <span class="preco">R$ 6,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Café expresso" data-preco="6.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO CAPPUCCINO NA PASTA images -->
+                <img th:src="@{/img/cappuccino.jpg}"
+                     alt="Cappuccino"
+                     class="foto-produto">
+
+                <div class="informacoes-produto">
+                    <h3>Cappuccino</h3>
+                    <p>Café cremoso com leite.</p>
+                    <span class="preco">R$ 10,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Cappuccino" data-preco="10.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO MATCHA LATTE NA PASTA images -->
+                <img th:src="@{/img/matchalatte.jpg}"
+                     alt="Matcha latte"
+                     class="foto-produto">
+
+                <div class="informacoes-produto">
+                    <h3>Matcha latte</h3>
+                    <p>Matcha com leite cremoso.</p>
+                    <span class="preco">R$ 12,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Matcha latte" data-preco="12.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- BEBIDAS GELADAS -->
+    <section class="secao-produtos" id="geladas">
+        <h2>Bebidas geladas</h2>
+
+        <div class="grade-produtos">
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO ICED COFFEE NA PASTA images -->
+                <img th:src="@{/img/cafegelado.jpg}"
+                     alt="Café gelado" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Iced Coffee</h3>
+                    <p>Café gelado refrescante.</p>
+                    <span class="preco">R$ 9,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Iced Coffee" data-preco="9.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO FRAPPÉ NA PASTA images -->
+                <img th:src="@{/img/frappé.jpg}"
+                     alt="Frappé" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Frappé</h3>
+                    <p>Bebida gelada e cremosa.</p>
+                    <span class="preco">R$ 13,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Frappé" data-preco="13.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO SMOOTHIE NA PASTA images -->
+                <img th:src="@{/img/smothiedefruta.jpg}"
+                     alt="Smoothie de frutas" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Smoothie de frutas</h3>
+                    <p>Frutas batidas e refrescantes.</p>
+                    <span class="preco">R$ 11,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Smoothie de frutas" data-preco="11.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- PADARIA E CONFEITARIA -->
+    <section class="secao-produtos" id="padaria">
+        <h2>Padaria e confeitaria</h2>
+
+        <div class="grade-produtos">
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO PÃO DE QUEIJO NA PASTA images -->
+                <img th:src="@{/img/paodequeijo.jpg}"
+                     alt="Pão de queijo" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Pão de queijo</h3>
+                    <p>Assado e saboroso.</p>
+                    <span class="preco">R$ 5,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Pão de queijo" data-preco="5.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO CROISSANT NA PASTA images -->
+                <img th:src="@{/img/croissant.jpg}"
+                     alt="Croissant" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Croissant</h3>
+                    <p>Massa folhada e dourada.</p>
+                    <span class="preco">R$ 8,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Croissant" data-preco="8.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO BROWNIE NA PASTA images -->
+                <img th:src="@{/img/brownie.jpg}"
+                     alt="Brownie" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Brownie</h3>
+                    <p>Brownie macio de chocolate.</p>
+                    <span class="preco">R$ 9,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Brownie" data-preco="9.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- LANCHES SALGADOS -->
+    <section class="secao-produtos" id="salgados">
+        <h2>Lanches salgados</h2>
+
+        <div class="grade-produtos">
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO MISTO QUENTE NA PASTA images -->
+                <img th:src="@{/img/mistoquente.jpg}"
+                     alt="Misto quente" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Misto quente</h3>
+                    <p>Pão tostado com queijo e presunto.</p>
+                    <span class="preco">R$ 10,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Misto quente" data-preco="10.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO WRAP NA PASTA images -->
+                <img th:src="@{/img/wrapdefrango.jpg}"
+                     alt="Wrap de frango" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Wrap de frango</h3>
+                    <p>Recheio de frango temperado.</p>
+                    <span class="preco">R$ 14,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Wrap de frango" data-preco="14.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DA QUICHE NA PASTA images -->
+                <img th:src="@{/img/quichedequeijo.jpg}"
+                     alt="Quiche de queijo" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Quiche de queijo</h3>
+                    <p>Massa delicada com queijo.</p>
+                    <span class="preco">R$ 9,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Quiche de queijo" data-preco="9.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- SOBREMESAS -->
+    <section class="secao-produtos" id="sobremesas">
+        <h2>Sobremesas</h2>
+
+        <div class="grade-produtos">
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO PUDIM NA PASTA images -->
+                <img th:src="@{/img/pudim.jpg}"
+                     alt="Pudim" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Pudim</h3>
+                    <p>Pudim com calda de caramelo.</p>
+                    <span class="preco">R$ 7,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Pudim" data-preco="7.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO BRIGADEIRO NA PASTA images -->
+                <img th:src="@{/img/brigadeirogourmet.jpg}"
+                     alt="Brigadeiro gourmet" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Brigadeiro gourmet</h3>
+                    <p>Brigadeiro artesanal de chocolate.</p>
+                    <span class="preco">R$ 4,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Brigadeiro gourmet" data-preco="4.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO CHEESECAKE NA PASTA images -->
+                <img th:src="@{/img/cheesecake.jpg}"
+                     alt="Cheesecake" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Cheesecake</h3>
+                    <p>Cheesecake cremoso.</p>
+                    <span class="preco">R$ 12,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Cheesecake" data-preco="12.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- OPÇÕES SAUDÁVEIS -->
+    <section class="secao-produtos" id="saudaveis">
+        <h2>Opções saudáveis</h2>
+
+        <div class="grade-produtos">
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DA SALADA DE FRUTAS NA PASTA images -->
+                <img th:src="@{/img/saladadefrutas.jpg}"
+                     alt="Salada de frutas" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Salada de frutas</h3>
+                    <p>Frutas frescas selecionadas.</p>
+                    <span class="preco">R$ 8,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Salada de frutas" data-preco="8.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO IOGURTE NA PASTA images -->
+                <img th:src="@{/img/iogurtecomgranola.jpg}"
+                     alt="Iogurte com granola" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Iogurte com granola</h3>
+                    <p>Iogurte acompanhado de granola.</p>
+                    <span class="preco">R$ 9,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Iogurte com granola" data-preco="9.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DA TAPIOCA NA PASTA images -->
+                <img th:src="@{/img/tapioca.jpg}"
+                     alt="Tapioca" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Tapioca</h3>
+                    <p>Tapioca preparada na hora.</p>
+                    <span class="preco">R$ 8,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Tapioca" data-preco="8.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- PRODUTOS PARA VENDA -->
+    <section class="secao-produtos" id="venda">
+        <h2>Produtos para venda</h2>
+
+        <div class="grade-produtos">
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DOS GRÃOS DE CAFÉ NA PASTA images -->
+                <img th:src="@{/img/graosdecafe.jpg}"
+                     alt="Grãos de café especiais" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Grãos de café especiais</h3>
+                    <p>Pacote de grãos selecionados.</p>
+                    <span class="preco">R$ 25,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Grãos de café especiais" data-preco="25.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DA CANECA NA PASTA images -->
+                <img th:src="@{/img/canecapersonalizada.jpg}"
+                     alt="Caneca personalizada" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Caneca personalizada</h3>
+                    <p>Caneca especial Chanel Café.</p>
+                    <span class="preco">R$ 30,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Caneca personalizada" data-preco="30.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <!-- COLOQUE A FOTO DO MEL NA PASTA images -->
+                <img th:src="@{/img/melartesanal.jpg}"
+                     alt="Mel artesanal" class="foto-produto">
+                <div class="informacoes-produto">
+                    <h3>Mel artesanal</h3>
+                    <p>Mel artesanal selecionado.</p>
+                    <span class="preco">R$ 18,00</span>
+                    <button class="botao-carrinho" type="button"
+                            data-nome="Mel artesanal" data-preco="18.00">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <p id="mensagem-carrinho" class="mensagem-carrinho"
+       role="status" aria-live="polite"></p>
+
+</main>
+
+<script th:src="@{/js/produtos.js}"></script>
+
+</body>
+</html>
