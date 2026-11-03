@@ -1,10 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entrar | Chanel Café</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
-<body>
+
+<body class="pagina-acesso">
+
+<!-- MENU DO TOPO -->
+<header class="menu-acesso">
+
+    <a th:href="@{/}" class="logo">CHANEL CAFÉ</a>
+
+    <nav>
+        <a th:href="@{/}">Início</a>
+        <a th:href="@{/login}" class="ativo">Entrar</a>
+    </nav>
+
+</header>
+
+<!-- FORMULÁRIO DE LOGIN -->
+<main class="conteudo-acesso">
+
+    <section class="formulario-acesso">
+
+        <h1>Bem-vindo de volta!</h1>
+
+        <p class="descricao-acesso">
+            Entre na sua conta para aproveitar o Chanel Café.
+        </p>
+
+        <form th:action="@{/login}" method="post">
+
+            <div class="campo-acesso">
+                <label for="email">E-mail</label>
+
+                <input
+                        type="email"
+                        id="email"
+                        name="username"
+                        placeholder="Digite seu e-mail"
+                        required>
+            </div>
+
+            <div class="campo-acesso">
+                <label for="senha">Senha</label>
+
+                <input
+                        type="password"
+                        id="senha"
+                        name="password"
+                        placeholder="Digite sua senha"
+                        required>
+            </div>
+
+            <button type="submit" class="botao-acesso">
+                Entrar
+            </button>
+
+        </form>
+
+        <div class="link-acesso">
+            <p>
+                Não tem uma conta?
+                <a th:href="@{/cadastro}">Cadastrar-se</a>
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer class="rodape-acesso">
+    <p>© 2026 Chanel Café — Mais que café, uma experiência.</p>
+</footer>
 
 </body>
 </html>

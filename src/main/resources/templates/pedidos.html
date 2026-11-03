@@ -1,60 +1,168 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Meus Pedidos - Chanel Café</title>
 
-    <title>Meu Pedido - Chanel Café</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
 <body>
 
-    <header>
+<!-- CABEÇALHO -->
+<header>
+    <div class="logo">
+        <h1>CHANEL CAFÉ</h1>
+    </div>
 
-        <div>
-            <h1>CHANEL CAFÉ</h1>
-        </div>
+    <nav>
+        <a th:href="@{/}">Início</a>
 
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="produtos.html">Cardápio</a>
-            <a href="pedidos.html">Pedidos</a>
-            <a href="carrinho.html" class="icone-carrinho" title="Carrinho">
-                🛒
-            </a>
-        </nav>
+        <a th:href="@{/produtos}">Cardápio</a>
 
-    </header>
+        <a th:href="@{/pedidos}" class="link-ativo">
+            Pedidos
+        </a>
 
-    <main>
+        <a th:href="@{/carrinho}"
+           class="icone-carrinho"
+           title="Carrinho">
+            🛒
+        </a>
+    </nav>
+</header>
 
-        <section class="pagina-pedidos">
+<!-- CONTEÚDO PRINCIPAL -->
+<main>
 
-            <h2>Meu Pedido</h2>
+    <section class="pagina-pedidos">
+
+        <div class="titulo-pedidos">
+            <p class="subtitulo">CHANEL CAFÉ</p>
+
+            <h2>Meus Pedidos</h2>
 
             <p class="descricao">
-                Confira os detalhes do seu pedido.
+                Acompanhe seus pedidos e confira os detalhes
+                de cada experiência no Chanel Café.
+            </p>
+        </div>
+
+        <!-- MENSAGEM QUANDO NÃO EXISTEM PEDIDOS -->
+        <div class="pedido-vazio"
+             th:if="${pedidos == null or #lists.isEmpty(pedidos)}">
+
+            <div class="icone-pedido-vazio">☕</div>
+
+            <h3>Você ainda não realizou nenhum pedido.</h3>
+
+            <p>
+                Que tal escolher seu café favorito e aproveitar
+                nossas delícias?
             </p>
 
-            <div id="pedido-container">
+            <a th:href="@{/produtos}" class="botao-cardapio">
+                CONHEÇA NOSSO CARDÁPIO
+            </a>
 
-            </div>
+        </div>
 
-        </section>
+        <!-- LISTA DE PEDIDOS -->
+        <div class="lista-pedidos"
+             th:if="${pedidos != null and !#lists.isEmpty(pedidos)}">
 
-    </main>
+            <article class="card-pedido"
+                     th:each="pedido : ${pedidos}">
 
-    <footer>
+                <div class="cabecalho-pedido">
 
-        <p>© 2026 Chanel Café. Todos os direitos reservados.</p>
+                    <div>
+                            <span class="texto-pequeno">
+                                Número do pedido
+                            </span>
 
-    </footer>
+                        <h3>
+                                <span th:text="${pedido.id}">
+                                    001
+                                </span>
+                        </h3>
+                    </div>
 
-    <script src="../js/finalizarpedido.js"></script>
+                    <span class="status-pedido"
+                          th:text="${pedido.status}">
+                            Em preparação
+                        </span>
+
+                </div>
+
+                <div class="informacoes-pedido">
+
+                    <p>
+                        <strong>Data:</strong>
+
+                        <span th:text="${pedido.data}">
+                                03/11/2026
+                            </span>
+                    </p>
+
+                    <p>
+                        <strong>Total:</strong>
+
+                        <span th:text="${#numbers.formatCurrency(pedido.total)}">
+                                R$ 25,00
+                            </span>
+                    </p>
+
+                </div>
+
+                <!-- PRODUTOS DO PEDIDO -->
+                <div class="itens-pedido">
+
+                    <h4>Itens do pedido</h4>
+
+                    <div class="item-pedido"
+                         th:each="item : ${pedido.itens}">
+
+                            <span th:text="${item.nome}">
+                                Café Expresso
+                            </span>
+
+                        <span>
+                                <span th:text="${item.quantidade}">
+                                    1
+                                </span>
+                                x
+
+                                <span th:text="${#numbers.formatCurrency(item.preco)}">
+                                    R$ 6,00
+                                </span>
+                            </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+
+    <h3>CHANEL CAFÉ</h3>
+
+    <p>Mais que café, uma experiência.</p>
+
+    <p>© 2026 Chanel Café. Todos os direitos reservados.</p>
+
+</footer>
 
 </body>
-
 </html>

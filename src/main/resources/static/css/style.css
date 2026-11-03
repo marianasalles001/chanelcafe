@@ -456,4 +456,253 @@ footer p {
         font-size: 30px;
     }
 }
+/* ==========================================
+   LOGIN E CADASTRO - CHANEL CAFÉ
+========================================== */
 
+.pagina-acesso {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f8f4ef;
+    color: #49372c;
+    font-family: Georgia, serif;
+}
+
+/* MENU SUPERIOR */
+
+.menu-acesso {
+    width: 100%;
+    min-height: 85px;
+    box-sizing: border-box;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fffdf9;
+    border-bottom: 1px solid #eee2d5;
+}
+
+.menu-acesso .logo {
+    color: #49372c;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.menu-acesso nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu-acesso nav a {
+    color: #49372c;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu-acesso nav a:hover {
+    color: #a17b5b;
+}
+
+.menu-acesso nav a.ativo {
+    font-weight: bold;
+    border-bottom: 1px solid #76543e;
+    padding-bottom: 5px;
+}
+
+/* ÁREA DO FORMULÁRIO */
+
+.conteudo-acesso {
+    min-height: calc(100vh - 170px);
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+/* CAIXA DO FORMULÁRIO */
+
+.formulario-acesso {
+    width: 100%;
+    max-width: 460px;
+    box-sizing: border-box;
+
+    padding: 45px;
+
+    background-color: #fffdf9;
+    border: 1px solid #eee2d5;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(73, 55, 44, 0.10);
+}
+
+/* TÍTULO */
+
+.formulario-acesso h1 {
+    margin: 0 0 15px;
+
+    color: #49372c;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* TEXTO ABAIXO DO TÍTULO */
+
+.descricao-acesso {
+    margin: 0 0 30px;
+
+    color: #76543e;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* CAMPOS */
+
+.campo-acesso {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.campo-acesso label {
+    margin-bottom: 9px;
+    color: #49372c;
+    font-size: 14px;
+}
+
+.campo-acesso input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    background-color: #fff;
+    border: 1px solid #d8c7b8;
+    border-radius: 6px;
+
+    color: #49372c;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo-acesso input::placeholder {
+    color: #a7978a;
+}
+
+.campo-acesso input:focus {
+    outline: none;
+    border-color: #76543e;
+    box-shadow: 0 0 0 3px rgba(118, 84, 62, 0.10);
+}
+
+/* BOTÃO */
+
+.botao-acesso {
+    width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+
+    background-color: #49372c;
+    border: 1px solid #49372c;
+    border-radius: 6px;
+
+    color: #fffdf9;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao-acesso:hover {
+    background-color: #76543e;
+    border-color: #76543e;
+    transform: translateY(-2px);
+}
+
+/* LINK LOGIN / CADASTRO */
+
+.link-acesso {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.link-acesso p {
+    margin: 0;
+    color: #76543e;
+    font-size: 14px;
+}
+
+.link-acesso a {
+    color: #49372c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-acesso a:hover {
+    color: #a17b5b;
+    text-decoration: underline;
+}
+
+/* RODAPÉ */
+
+.rodape-acesso {
+    padding: 20px;
+
+    background-color: #fffdf9;
+    border-top: 1px solid #eee2d5;
+
+    text-align: center;
+}
+
+.rodape-acesso p {
+    margin: 0;
+    color: #76543e;
+    font-size: 13px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .menu-acesso {
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .menu-acesso .logo {
+        font-size: 20px;
+    }
+
+    .menu-acesso nav {
+        gap: 18px;
+    }
+
+    .conteudo-acesso {
+        padding: 35px 15px;
+    }
+
+    .formulario-acesso {
+        padding: 30px 22px;
+    }
+
+    .formulario-acesso h1 {
+        font-size: 25px;
+    }
+}

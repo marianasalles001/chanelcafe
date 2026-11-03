@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Chanel Café | Mais que café, uma experiência</title>
+
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
@@ -19,9 +20,7 @@
 
     <nav>
         <a th:href="@{/}">Início</a>
-        <a th:href="@{/produtos}">Cardápio</a>
-        <a th:href="@{/pedidos}">Pedidos</a>
-        <a th:href="@{/carrinho}" class="icone-carrinho" title="Carrinho">🛒</a>
+        <a th:href="@{/login}">Entrar</a>
     </nav>
 </header>
 
@@ -62,6 +61,7 @@
 
         <article>
             <h3>☕ CAFÉS ESPECIAIS</h3>
+
             <p>
                 Grãos selecionados, aromas marcantes e sabores preparados
                 para tornar cada xícara inesquecível.
@@ -70,6 +70,7 @@
 
         <article>
             <h3>🥐 DOCES E SALGADOS</h3>
+
             <p>
                 Uma seleção de doces e salgados deliciosos para acompanhar
                 seu café favorito em qualquer momento do dia.
@@ -78,6 +79,7 @@
 
         <article>
             <h3>AMBIENTE ACOLHEDOR</h3>
+
             <p>
                 Um espaço confortável e elegante, perfeito para relaxar,
                 estudar, trabalhar ou encontrar pessoas especiais.
@@ -86,6 +88,7 @@
 
         <article>
             <h3>ATENDIMENTO ESPECIAL</h3>
+
             <p>
                 Cada detalhe é pensado para receber você com carinho
                 e proporcionar uma experiência agradável.
@@ -128,6 +131,7 @@
 
         <article>
             <h3>Qualidade</h3>
+
             <p>
                 Valorizamos ingredientes selecionados e o cuidado
                 no preparo de cada produto.
@@ -136,6 +140,7 @@
 
         <article>
             <h3>Conforto</h3>
+
             <p>
                 Buscamos oferecer um ambiente acolhedor, elegante
                 e agradável para todos.
@@ -144,6 +149,7 @@
 
         <article>
             <h3>Satisfação</h3>
+
             <p>
                 Queremos que cada visita seja uma experiência
                 positiva e cheia de bons momentos.
@@ -152,6 +158,7 @@
 
         <article>
             <h3>Tradição</h3>
+
             <p>
                 Celebramos o prazer de apreciar um bom café,
                 respeitando o sabor e o cuidado em cada preparo.
@@ -170,7 +177,7 @@
             e encontre seu novo sabor favorito.
         </p>
 
-        <a th:href="@{/produtos}" class="botao-cardapio">
+        <a th:href="@{/login}" class="botao-cardapio">
             CONHEÇA NOSSO CARDÁPIO
         </a>
 
