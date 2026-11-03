@@ -1,4 +1,4 @@
-package com.chanelcafe.chanelcafe.controller;
+package seduc499.com.br.chanelcafe.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
