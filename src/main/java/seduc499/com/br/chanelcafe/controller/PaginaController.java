@@ -15,4 +15,14 @@ public class PaginaController {
     public String produtos() {
         return "produtos";
     }
+
+    @GetMapping("/pedidos")
+    public String pedidos() {
+        return "pedidos";
+    }
+
+    @GetMapping("/carrinho")
+    public String carrinho() {
+        return "carrinho";
+    }
 }
